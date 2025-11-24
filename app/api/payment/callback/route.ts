@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
             successUrl.searchParams.set('orderId', orderId || '');
             successUrl.searchParams.set('authCode', authCode || '');
 
-            return NextResponse.redirect(successUrl);
+            return NextResponse.redirect(successUrl, { status: 307 });
         } else {
             // Payment failed - redirect to error page
             const errorUrl = new URL('/payment/error', request.url);
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
             errorUrl.searchParams.set('code', procReturnCode || '');
             errorUrl.searchParams.set('orderId', orderId || '');
 
-            return NextResponse.redirect(errorUrl);
+            return NextResponse.redirect(errorUrl, { status: 307 });
         }
     } catch (error) {
         console.error('Callback processing error:', error);
