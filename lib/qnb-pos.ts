@@ -83,6 +83,7 @@ export async function initiate3DPayment(
         MbrId: '5',
         // Merchant credentials
         MerchantID: credentials.merchantCode,
+        MerchantPass: credentials.merchantPass,
         UserCode: credentials.merchantUser,
         UserPass: credentials.merchantUserPass,
 
