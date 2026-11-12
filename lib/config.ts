@@ -10,12 +10,12 @@ export interface QnbPosCredentials {
 }
 
 export const credentials: QnbPosCredentials = {
-    merchantCode: '085300000009597',
+    merchantCode: '085300000009704',
     merchantTerminalNo: 'VS251922',
-    merchantName: '3D TEST UYE ISYERI',
+    merchantName: '3D PAY TEST ISYERI',
     merchantPass: '12345678',
-    merchantUser: 'QNB_ISYERI_KULLANICI',
-    merchantUserPass: '9ZPar',
+    merchantUser: 'QNB_API_KULLANICI_3DPAY',
+    merchantUserPass: 'UcBN0',
     apiUser: 'QNB_API_KULLANICI',
     apiPass: 'FwCX2',
 }
